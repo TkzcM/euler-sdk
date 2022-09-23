@@ -67,7 +67,7 @@ class Euler {
 
   constructor(
     signerOrProvider?: SignerOrProvider,
-    chainId = 1,
+    chainId = 10001,
     networkConfig?: NetworkConfig
   ) {
     this.chainId = chainId;
@@ -80,7 +80,7 @@ class Euler {
     this._underlyingToTokenCache = {};
     this._signerOrProvider = signerOrProvider;
 
-    if (this.chainId === 1) {
+    if (this.chainId === 10001) {
       const { eul: eulConfig, ...addresses } = addressesMainnet;
       this.eulTokenConfig = eulConfig;
       this.addresses = addresses as any;
